@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-@9cur%2@67y^f(k@4j-w83t+c-$pm^-#91#64$5d$f4y50b=lk'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
@@ -92,7 +92,10 @@ DATABASES = {
     }
 }
 
-
+GRAPPELLI_ADMIN_TITLE = "Lumos Mind"
+CSRF_TRUSTED_ORIGINS = [
+    "https://feedback.lumosmind.uz"
+]
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
