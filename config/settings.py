@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-@9cur%2@67y^f(k@4j-w83t+c-$pm^-#91#64$5d$f4y50b=lk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -87,7 +87,7 @@ DATABASES = {
         'NAME': 'feedback',       # <-- PostgreSQL bazangiz nomi
         'USER': 'postgres',       # <-- PostgreSQL foydalanuvchi nomi
         'PASSWORD': 'linux', # <-- foydalanuvchi paroli
-        'HOST': 'localhost',    # <-- agar server lokal bo‘lsa
+        'HOST': '34.136.106.176',    # <-- agar server lokal bo‘lsa
         'PORT': '5432',         # <-- default port
     }
 }
@@ -127,9 +127,13 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
+import os
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
