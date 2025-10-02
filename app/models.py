@@ -6,8 +6,8 @@ class TelegramUsers(models.Model):
     telegram_id = models.BigIntegerField(unique=True)
 
     class Meta:
-        verbose_name = 'School Users'
-        verbose_name_plural = 'School Users'
+        verbose_name = 'Пользователи школы'
+        verbose_name_plural = 'Пользователи школы'
 
     def __str__(self):
         return f"{self.full_name}"
@@ -21,8 +21,8 @@ class AnonymFeedbackModel(models.Model):
     def __str__(self):
         return f"{self.feedback[0:10]}"
     class Meta:
-        verbose_name = 'Anonym Feedback'
-        verbose_name_plural = 'Anonym Feedback'
+        verbose_name = 'Анонимный отзыв'
+        verbose_name_plural = 'Анонимные отзывы'
 
 class IdentifiedFeedbackModel(models.Model):
     feedback = models.TextField()
@@ -34,6 +34,6 @@ class IdentifiedFeedbackModel(models.Model):
         return f"{self.feedback[0:10]}"
 
     class Meta:
-        verbose_name = 'Identified Feedback'
-        verbose_name_plural = 'Identified Feedback'
+        verbose_name = 'Идентифицированный отзыв'
+        verbose_name_plural = 'Идентифицированные отзывы'
 
